@@ -25,7 +25,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    background-image: url('https://i.ytimg.com/vi/SVKCzjQAA9E/maxresdefault.jpg');
+    background-image: url('https://wallpapercave.com/wp/wp7794530.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -33,15 +33,17 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .container {
     background-color: rgba(255, 255, 255, 0.8);
-    border: 5px solid;
+    border: 10px solid;
     border-image: linear-gradient(90deg, #8e44ad, #27ae60) 1;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    padding: 40px;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -52,7 +54,7 @@ h1 {
 }
 
 #ip {
-    font-size: 1.2em;
+    font-size: 1.5em;
     color: #555;
 }
 
