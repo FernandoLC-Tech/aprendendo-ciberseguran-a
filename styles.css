@@ -1,27 +1,3 @@
-@keyframes float {
-    0% {
-        transform: translate(0, 0);
-    }
-    50% {
-        transform: translate(20px, 20px);
-    }
-    100% {
-        transform: translate(0, 0);
-    }
-}
-
-@keyframes float-reverse {
-    0% {
-        transform: translate(0, 0);
-    }
-    50% {
-        transform: translate(-20px, -20px);
-    }
-    100% {
-        transform: translate(0, 0);
-    }
-}
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -29,24 +5,22 @@ body {
     background-size: cover;
     background-position: center;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: flex-start;
     height: 100vh;
     margin: 0;
     position: relative;
-    overflow: hidden;
 }
 
 .container {
     background-color: rgba(255, 255, 255, 0);
-    border: 5px double;
+    border: 10px double;
     border-color: #0000ff #ffffff; /* Azul e branca */
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     padding: 40px;
     text-align: center;
-    position: absolute;
-    top: 10%;
     z-index: 1;
 }
 
@@ -56,7 +30,7 @@ h1 {
 }
 
 #ip {
-    font-size: 2.5em;
+    font-size: 3em;
     color: red; /* Vermelho */
     font-family: 'Orbitron', sans-serif; /* Fonte 3D */
 }
@@ -65,34 +39,8 @@ h1 {
     font-weight: bold;
 }
 
-/* Estilizando imagens e adicionando animação */
-.imagem {
-    position: absolute;
-    width: 100px; /* Ajuste o tamanho conforme necessário */
-    height: 100px; /* Ajuste o tamanho conforme necessário */
-    z-index: 0;
-    animation: float 3s ease-in-out infinite;
-    pointer-events: none; /* Para garantir que não interfira com o mouse */
-}
-
-.imagem:nth-child(odd) {
-    animation: float-reverse 3s ease-in-out infinite;
-}
-
-/* Posições iniciais das imagens */
-.imagem1 { top: 10%; left: 5%; }
-.imagem2 { top: 20%; right: 10%; }
-.imagem3 { bottom: 15%; left: 15%; }
-.imagem4 { bottom: 10%; right: 20%; }
-.imagem5 { top: 5%; right: 25%; }
-.imagem6 { bottom: 25%; left: 25%; }
-.imagem7 { top: 30%; left: 30%; }
-.imagem8 { bottom: 30%; right: 30%; }
-.imagem9 { top: 40%; left: 40%; }
-.imagem10 { bottom: 40%; right: 40%; }
-
-/* Animação de seguir o mouse */
-body:hover .imagem {
-    transition: transform 0.5s;
-    transform: translate(var(--mouse-x), var(--mouse-y));
+.title-image {
+    width: 200px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-bottom: 20px;
 }
