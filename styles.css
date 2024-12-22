@@ -1,36 +1,36 @@
 @keyframes float {
     0% {
-        transform: translateY(0);
+        transform: translate(0, 0);
     }
     50% {
-        transform: translateY(20px);
+        transform: translate(20px, 20px);
     }
     100% {
-        transform: translateY(0);
+        transform: translate(0, 0);
     }
 }
 
 @keyframes float-reverse {
     0% {
-        transform: translateY(0);
+        transform: translate(0, 0);
     }
     50% {
-        transform: translateY(-20px);
+        transform: translate(-20px, -20px);
     }
     100% {
-        transform: translateY(0);
+        transform: translate(0, 0);
     }
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    background-image: url('https://wallpapercave.com/wp/wp7794530.png');
+    background-image: url('https://www.hqzona.com.br/wp-content/uploads/2019/07/GalleryComics_1920x1080_20150506_BM-Ark-Riddler_55417975b97cc4.93940400.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
     margin: 0;
     position: relative;
@@ -39,32 +39,35 @@ body {
 
 .container {
     background-color: rgba(255, 255, 255, 0.8);
-    border: 10px solid;
-    border-image: linear-gradient(90deg, #8e44ad, #27ae60) 1;
-    border-radius: 10px;
+    border: 5px solid #00ff00; /* Verde neon */
+    border-radius: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     padding: 40px;
     text-align: center;
-    position: relative;
+    position: absolute;
+    top: 10%;
     z-index: 1;
 }
 
 h1 {
     color: #333;
+    font-size: 2em;
 }
 
 #ip {
-    font-size: 1.5em;
+    font-size: 2em;
     color: #555;
+    font-family: 'Orbitron', sans-serif; /* Fonte 3D */
 }
 
 /* Estilizando interrogações e adicionando animação */
 .interrogacao {
     position: absolute;
     font-size: 2em;
-    color: #27ae60;
+    color: #27ae60; /* Verde */
     z-index: 0;
     animation: float 3s ease-in-out infinite;
+    pointer-events: none; /* Para garantir que não interfira com o mouse */
 }
 
 .interrogacao:nth-child(odd) {
@@ -76,3 +79,14 @@ h1 {
 .interrogacao2 { top: 20%; right: 10%; }
 .interrogacao3 { bottom: 15%; left: 15%; }
 .interrogacao4 { bottom: 10%; right: 20%; }
+.interrogacao5 { top: 5%; right: 25%; }
+.interrogacao6 { bottom: 25%; left: 25%; }
+.interrogacao7 { top: 30%; left: 30%; }
+.interrogacao8 { bottom: 30%; right: 30%; }
+.interrogacao9 { top: 40%; left: 40%; }
+.interrogacao10 { bottom: 40%; right: 40%; }
+
+/* Animação de seguir o mouse */
+body:hover .interrogacao {
+    transform: translate(var(--mouse-x), var(--mouse-y));
+}
