@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     background-image: url('https://images5.alphacoders.com/445/445906.jpg');
     background-size: cover;
@@ -14,24 +14,25 @@ body {
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0);
+    background: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
     border: 10px double;
     border-color: #0000ff #ffffff; /* Azul e branca */
     border-radius: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     padding: 40px;
     text-align: center;
     z-index: 1;
 }
 
 h1 {
-    color: #333;
-    font-size: 2em;
+    color: #ffffff; /* Cor branca */
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra do texto */
 }
 
 #ip {
     font-size: 3em;
-    color: red; /* Vermelho */
+    color: #ff0000; /* Vermelho */
     font-family: 'Orbitron', sans-serif; /* Fonte 3D */
 }
 
@@ -40,7 +41,9 @@ h1 {
 }
 
 .title-image {
-    width: 200px; /* Ajuste o tamanho conforme necessário */
+    width: 300px; /* Ajuste o tamanho conforme necessário */
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Adicione uma sombra à imagem */
+    border-radius: 10px; /* Bordas arredondadas */
 }
