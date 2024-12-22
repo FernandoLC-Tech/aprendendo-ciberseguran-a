@@ -7,7 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100vh;
     margin: 0;
     position: relative;
@@ -20,6 +20,14 @@ body {
     margin-bottom: 20px;
 }
 
+.title-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Adicione uma sombra à imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
 .container {
     background: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
     border: 10px double;
@@ -29,6 +37,9 @@ body {
     padding: 40px;
     text-align: center;
     z-index: 1;
+    width: 80%; /* Ajuste a largura conforme necessário */
+    max-width: 600px; /* Largura máxima */
+    margin-top: 20px;
 }
 
 h1 {
@@ -45,11 +56,4 @@ h1 {
 
 #ip strong {
     font-weight: bold;
-}
-
-.title-image {
-    width: 200px; /* Ajuste o tamanho conforme necessário */
-    height: auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Adicione uma sombra à imagem */
-    border-radius: 10px; /* Bordas arredondadas */
 }
