@@ -55,7 +55,7 @@ h1 {
 }
 
 #ip {
-    font-size: 3em;
+    font-size: 2.5em;
     color: #555;
     font-family: 'Orbitron', sans-serif; /* Fonte 3D */
 }
@@ -68,8 +68,8 @@ h1 {
 /* Estilizando interrogações e adicionando animação */
 .interrogacao {
     position: absolute;
-    font-size: 2em;
-    color: #27ae60; /* Verde */
+    font-size: 4em; /* Tamanho maior */
+    color: #8e44ad; /* Roxa */
     z-index: 0;
     animation: float 3s ease-in-out infinite;
     pointer-events: none; /* Para garantir que não interfira com o mouse */
@@ -93,7 +93,6 @@ h1 {
 
 /* Animação de seguir o mouse */
 body:hover .interrogacao {
-    --mouse-x: calc(50% + (var(--mouse-x) - 50%) * 2);
-    --mouse-y: calc(50% + (var(--mouse-y) - 50%) * 2);
+    transition: transform 0.5s;
     transform: translate(var(--mouse-x), var(--mouse-y));
 }
