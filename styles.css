@@ -39,7 +39,8 @@ body {
 
 .container {
     background-color: rgba(255, 255, 255, 0);
-    border: 5px solid #00ff00; /* Verde neon */
+    border: 5px double;
+    border-color: #0000ff #ffffff; /* Azul e branca */
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     padding: 40px;
@@ -56,12 +57,11 @@ h1 {
 
 #ip {
     font-size: 2.5em;
-    color: #555;
+    color: red; /* Vermelho */
     font-family: 'Orbitron', sans-serif; /* Fonte 3D */
 }
 
 #ip strong {
-    color: #8e44ad; /* Roxo */
     font-weight: bold;
 }
 
