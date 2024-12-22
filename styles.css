@@ -1,6 +1,33 @@
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float-reverse {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    background-image: url('https://i.ytimg.com/vi/SVKCzjQAA9E/maxresdefault.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,11 +36,15 @@ body {
 }
 
 .container {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 5px solid;
+    border-image: linear-gradient(90deg, #8e44ad, #27ae60) 1;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 h1 {
@@ -24,3 +55,22 @@ h1 {
     font-size: 1.2em;
     color: #555;
 }
+
+/* Estilizando interrogações e adicionando animação */
+.interrogacao {
+    position: absolute;
+    font-size: 2em;
+    color: #27ae60;
+    z-index: 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+.interrogacao:nth-child(odd) {
+    animation: float-reverse 3s ease-in-out infinite;
+}
+
+/* Posições iniciais das interrogações */
+.interrogacao1 { top: 10%; left: 5%; }
+.interrogacao2 { top: 20%; right: 10%; }
+.interrogacao3 { bottom: 15%; left: 15%; }
+.interrogacao4 { bottom: 10%; right: 20%; }
