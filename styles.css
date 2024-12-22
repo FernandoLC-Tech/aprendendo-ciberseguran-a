@@ -13,6 +13,13 @@ body {
     position: relative;
 }
 
+.title-image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
 .container {
     background: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
     border: 10px double;
@@ -41,9 +48,8 @@ h1 {
 }
 
 .title-image {
-    width: 300px; /* Ajuste o tamanho conforme necessário */
+    width: 200px; /* Ajuste o tamanho conforme necessário */
     height: auto;
-    margin-bottom: 30px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Adicione uma sombra à imagem */
     border-radius: 10px; /* Bordas arredondadas */
 }
